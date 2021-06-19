@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Customers</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button color="secondary" (click)="showAddCustomerForm()">
+        <ion-icon slot="icon-only" ios="add-outline" md="add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item
+  *ngFor="let customer of customers | async">
+  <ion-label>
+    <h2>{{ customer.name}}</h2>
+    <p>{{ customer.phone }}</p>
+    <p>{{ customer.location }}</p>
+  </ion-label>
+</ion-item>
+</ion-content>

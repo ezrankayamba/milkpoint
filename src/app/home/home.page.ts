@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  text="Our first Ionic App"
   constructor() {}
-
+  onChangeText(){
+    this.text="Changed!"
+  }
 }
